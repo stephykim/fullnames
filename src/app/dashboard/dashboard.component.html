@@ -1,3 +1,19 @@
-<p>
-  dashboard works!
-</p>
+<h2>Welcome to the Dashboard</h2>
+
+<div>
+  First Name: <input [(ngModel)] = "firstNameSearch"/>
+</div>
+<div>
+  Last Name: <input [(ngModel)] = "lastNameSearch"/>
+</div>
+
+
+<button (click) = "searchName()">Search Name</button>
+<button (click) = "addName()">Add Name</button>
+
+<div *ngIf="results?.length > 0">
+    {{results}}
+</div>
+
+
+<app-history [searchHistory] = "searches"></app-history>
