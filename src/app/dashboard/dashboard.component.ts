@@ -44,9 +44,7 @@ export class DashboardComponent implements OnInit {
   }
 
   addName() {
-    console.log("before");
     this.dashboardService.addName(this.firstNameSearch, this.lastNameSearch);
-    console.log("after");
   }
   ngOnInit() {
   }

@@ -35,8 +35,9 @@ export class DashboardService {
   }
 
   addName(first: string, last: string) {
-    console.log("helloo");
-    this.firstNamesRef.push(first, "true");
-    this.lastNamesRef.push(last, "true");
+    this.db.list('firstNames').set(first, true);
+    this.db.list('lastNames').set(last, true);
+    // this.firstNamesRef.set(first, true);
+    // this.lastNamesRef.set(last, true);
   }
 }
